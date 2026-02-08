@@ -1316,21 +1316,35 @@ footer p {
   gap: 5px;
 }
 
-.dev-credit {
-  font-size: 0.8rem !important;
-  margin-top: 0.3rem;
-  opacity: 0.8;
+footer .heart-icon {
+  color: #e74c3c;
+  animation: heartbeat 1.5s ease infinite;
 }
 
-.dev-credit a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.3s;
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
-.dev-credit a:hover {
-  opacity: 0.7;
+.dev-toggle-btn {
+  margin: 0.8rem auto 0;
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.dev-info-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  opacity: 0;
+  width: 100%;
+}
+
+.dev-info-collapse.open {
+  max-height: 1200px;
+  opacity: 1;
 }
 
 .customize-section {
@@ -2143,8 +2157,13 @@ body.dark-mode .dev-link-btn:hover {
   color: white;
 }
 
-body.dark-mode .dev-credit a {
-  color: var(--accent-color);
+body.dark-mode .dev-toggle-btn {
+  background: var(--dark-button-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode .dev-toggle-btn:hover {
+  background: var(--dark-button-hover);
 }
 
 /* ========================================
@@ -2627,7 +2646,7 @@ button:focus, a:focus {
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .dev-credit {
+[dir="rtl"] .dev-toggle-btn {
   flex-direction: row-reverse;
 }
 

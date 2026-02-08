@@ -13,7 +13,6 @@ import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
 import Newsletter from "./components/Newsletter";
 import Contact from "./components/Contact";
-import DeveloperInfo from "./components/DeveloperInfo";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -36,7 +35,6 @@ function App() {
         <Testimonials />
         <Newsletter />
         <Contact />
-        <DeveloperInfo />
         <Footer />
       </div>
     </AppProvider>

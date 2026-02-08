@@ -1,23 +1,36 @@
 import { useState } from "react";
-import { FaHeart, FaPalette, FaShareAlt } from "react-icons/fa";
+import { FaHeart, FaPalette, FaShareAlt, FaCode, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useApp } from "../context/AppContext";
 import Customizer from "./Customizer";
 import ShareModal from "./ShareModal";
+import DeveloperInfo from "./DeveloperInfo";
 
 export default function Footer() {
   const { t } = useApp();
   const [showCustomizer, setShowCustomizer] = useState(false);
   const [showShare, setShowShare] = useState(false);
+  const [showDevInfo, setShowDevInfo] = useState(false);
 
   return (
     <>
       <footer>
         <p>
-          © {new Date().getFullYear()} - {t("createdWith")} <FaHeart />
+          © {new Date().getFullYear()} — Mahmoud Elkhwass <FaHeart className="heart-icon" />
         </p>
-        <p className="dev-credit">
-          {t("devCredit")} <a href="https://github.com/mr-coder-2707" target="_blank" rel="noopener noreferrer">Mahmoud Elkhwass</a>
-        </p>
+
+        <button
+          type="button"
+          className="btn small-button dev-toggle-btn"
+          onClick={() => setShowDevInfo((v) => !v)}
+        >
+          <FaCode /> <span>{t("aboutDeveloper")}</span>
+          {showDevInfo ? <FaChevronUp /> : <FaChevronDown />}
+        </button>
+
+        <div className={`dev-info-collapse ${showDevInfo ? "open" : ""}`}>
+          <DeveloperInfo />
+        </div>
+
         <div className="customize-section">
           <button
             type="button"
