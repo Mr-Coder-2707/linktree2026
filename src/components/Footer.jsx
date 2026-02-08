@@ -15,6 +15,9 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} - {t("createdWith")} <FaHeart />
         </p>
+        <p className="dev-credit">
+          {t("devCredit")} <a href="https://github.com/mr-coder-2707" target="_blank" rel="noopener noreferrer">Mahmoud Elkhwass</a>
+        </p>
         <div className="customize-section">
           <button
             type="button"

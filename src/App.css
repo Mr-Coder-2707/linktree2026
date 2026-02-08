@@ -1140,6 +1140,165 @@ body.dark-mode #theme-switch .icon-sun {
   margin-bottom: 0;
 }
 
+/* === Developer Info Section === */
+.developer-info-section {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.developer-info-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.dev-card {
+  background: var(--light-card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px var(--light-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dev-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dev-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.dev-intro h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--light-text);
+}
+
+.dev-title {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.dev-summary {
+  font-size: 0.9rem;
+  color: var(--light-subtext);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.dev-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+}
+
+.dev-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--light-subtext);
+}
+
+.dev-detail-item svg {
+  color: var(--primary-color);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.dev-detail-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.dev-detail-item a:hover {
+  opacity: 0.7;
+}
+
+.dev-tech-stack {
+  margin-bottom: 1.2rem;
+}
+
+.dev-tech-stack h4 {
+  font-size: 0.95rem;
+  color: var(--light-text);
+  margin-bottom: 0.6rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dev-links {
+  display: flex;
+  gap: 10px;
+}
+
+.dev-link-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  background: var(--light-button-bg);
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dev-link-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* === Footer === */
 footer {
   margin-top: 2rem;
@@ -1155,6 +1314,23 @@ footer p {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+
+.dev-credit {
+  font-size: 0.8rem !important;
+  margin-top: 0.3rem;
+  opacity: 0.8;
+}
+
+.dev-credit a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.dev-credit a:hover {
+  opacity: 0.7;
 }
 
 .customize-section {
@@ -1925,6 +2101,52 @@ body.dark-mode footer {
   border-top-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Dark mode - Developer Info */
+body.dark-mode .developer-info-section h2 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .dev-card {
+  background: var(--dark-card-bg);
+  box-shadow: 0 4px 15px var(--dark-shadow);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .dev-intro h3 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .dev-summary {
+  color: var(--dark-subtext);
+}
+
+body.dark-mode .dev-details {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode .dev-detail-item {
+  color: var(--dark-subtext);
+}
+
+body.dark-mode .dev-tech-stack h4 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .dev-link-btn {
+  background: var(--dark-button-bg);
+  color: var(--dark-text);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .dev-link-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+body.dark-mode .dev-credit a {
+  color: var(--accent-color);
+}
+
 /* ========================================
    ANIMATIONS — 3D Card Cascade
    ======================================== */
@@ -2381,6 +2603,31 @@ button:focus, a:focus {
 
 /* Footer */
 [dir="rtl"] footer p {
+  flex-direction: row-reverse;
+}
+
+/* Developer Info RTL */
+[dir="rtl"] .dev-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dev-intro {
+  text-align: right;
+}
+
+[dir="rtl"] .dev-summary {
+  text-align: right;
+}
+
+[dir="rtl"] .dev-detail-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .developer-info-section h2 {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dev-credit {
   flex-direction: row-reverse;
 }
 

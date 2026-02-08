@@ -94,6 +94,14 @@ const translations = {
     schemeForestEarth: "Forest Earth",
     // MediaEmbed
     youtubeVideo: "YouTube video",
+    // DeveloperInfo
+    aboutDeveloper: "About the Developer",
+    devRole: "Full Stack Developer",
+    devSummary: "A passionate Full Stack Developer with expertise in building intelligent systems, scalable web & mobile applications, and modern user interfaces. Experienced in Python, PHP, JavaScript, React, Node.js, and database management.",
+    devLocation: "Egypt",
+    devEducation: "Computer Science & Software Engineering",
+    devTechStack: "Tech Stack",
+    devCredit: "Designed & Developed by",
   },
   ar: {
     bio: "أنا محمود الخواص — مطوّر Full Stack شغوف ومبتكر تقني، متخصص في بناء أنظمة ذكية، وواجهات سهلة الاستخدام، وتطبيقات ويب وموبايل قوية.✨",
@@ -190,6 +198,14 @@ const translations = {
     schemeForestEarth: "أرض الغابة",
     // MediaEmbed
     youtubeVideo: "فيديو يوتيوب",
+    // DeveloperInfo
+    aboutDeveloper: "عن المطور",
+    devRole: "مطوّر Full Stack",
+    devSummary: "مطوّر Full Stack شغوف بخبرة في بناء أنظمة ذكية، وتطبيقات ويب وموبايل قابلة للتطوير، وواجهات مستخدم حديثة. خبرة في Python وPHP وJavaScript وReact وNode.js وإدارة قواعد البيانات.",
+    devLocation: "مصر",
+    devEducation: "علوم الحاسب وهندسة البرمجيات",
+    devTechStack: "التقنيات المستخدمة",
+    devCredit: "تصميم وتطوير",
   },
   fr: {
     bio: "Je suis Mahmoud Elkhwass — un développeur Full Stack passionné et créateur technologique, spécialisé dans la création de systèmes intelligents, d'interfaces conviviales et d'applications web et mobiles performantes.✨",
@@ -286,6 +302,14 @@ const translations = {
     schemeForestEarth: "Terre Forestière",
     // MediaEmbed
     youtubeVideo: "Vidéo YouTube",
+    // DeveloperInfo
+    aboutDeveloper: "À propos du développeur",
+    devRole: "Développeur Full Stack",
+    devSummary: "Un développeur Full Stack passionné avec une expertise dans la construction de systèmes intelligents, d'applications web et mobiles évolutives et d'interfaces utilisateur modernes. Expérimenté en Python, PHP, JavaScript, React, Node.js et gestion de bases de données.",
+    devLocation: "Égypte",
+    devEducation: "Informatique et Génie Logiciel",
+    devTechStack: "Stack Technique",
+    devCredit: "Conçu et développé par",
   },
 };
 
