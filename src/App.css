@@ -55,7 +55,12 @@ body {
   position: relative;
   perspective: 1200px;
   transform-style: preserve-3d;
-  animation: containerDrop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+  opacity: 0;
+  transform: translateY(-60px) scale(0.92);
+}
+
+.content-loaded .profile-container {
+  animation: containerDrop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
 }
 
 /* === Preloader === */
@@ -1850,17 +1855,20 @@ footer .heart-icon {
 
 .social-grid .social-icon {
   opacity: 0;
+}
+
+.content-loaded .social-grid .social-icon {
   animation: iconPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
-.social-grid .social-icon:nth-child(1) { animation-delay: 1.1s; }
-.social-grid .social-icon:nth-child(2) { animation-delay: 1.17s; }
-.social-grid .social-icon:nth-child(3) { animation-delay: 1.24s; }
-.social-grid .social-icon:nth-child(4) { animation-delay: 1.31s; }
-.social-grid .social-icon:nth-child(5) { animation-delay: 1.38s; }
-.social-grid .social-icon:nth-child(6) { animation-delay: 1.45s; }
-.social-grid .social-icon:nth-child(7) { animation-delay: 1.52s; }
-.social-grid .social-icon:nth-child(8) { animation-delay: 1.59s; }
+.content-loaded .social-grid .social-icon:nth-child(1) { animation-delay: 0.55s; }
+.content-loaded .social-grid .social-icon:nth-child(2) { animation-delay: 0.62s; }
+.content-loaded .social-grid .social-icon:nth-child(3) { animation-delay: 0.69s; }
+.content-loaded .social-grid .social-icon:nth-child(4) { animation-delay: 0.76s; }
+.content-loaded .social-grid .social-icon:nth-child(5) { animation-delay: 0.83s; }
+.content-loaded .social-grid .social-icon:nth-child(6) { animation-delay: 0.9s; }
+.content-loaded .social-grid .social-icon:nth-child(7) { animation-delay: 0.97s; }
+.content-loaded .social-grid .social-icon:nth-child(8) { animation-delay: 1.04s; }
 
 /* Skill tags flip in like cards being flipped over */
 @keyframes tagFlip {
@@ -1879,16 +1887,19 @@ footer .heart-icon {
 
 .skills-container .skill-tag {
   opacity: 0;
+}
+
+.content-loaded .skills-container .skill-tag {
   animation: tagFlip 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
-.skills-container .skill-tag:nth-child(1) { animation-delay: 1.4s; }
-.skills-container .skill-tag:nth-child(2) { animation-delay: 1.47s; }
-.skills-container .skill-tag:nth-child(3) { animation-delay: 1.54s; }
-.skills-container .skill-tag:nth-child(4) { animation-delay: 1.61s; }
-.skills-container .skill-tag:nth-child(5) { animation-delay: 1.68s; }
-.skills-container .skill-tag:nth-child(6) { animation-delay: 1.75s; }
-.skills-container .skill-tag:nth-child(7) { animation-delay: 1.82s; }
+.content-loaded .skills-container .skill-tag:nth-child(1) { animation-delay: 0.8s; }
+.content-loaded .skills-container .skill-tag:nth-child(2) { animation-delay: 0.87s; }
+.content-loaded .skills-container .skill-tag:nth-child(3) { animation-delay: 0.94s; }
+.content-loaded .skills-container .skill-tag:nth-child(4) { animation-delay: 1.01s; }
+.content-loaded .skills-container .skill-tag:nth-child(5) { animation-delay: 1.08s; }
+.content-loaded .skills-container .skill-tag:nth-child(6) { animation-delay: 1.15s; }
+.content-loaded .skills-container .skill-tag:nth-child(7) { animation-delay: 1.22s; }
 
 /* Achievement cards slam down like thrown cards */
 @keyframes cardSlam {
@@ -1912,12 +1923,15 @@ footer .heart-icon {
 
 .achievements-container .achievement-card {
   opacity: 0;
+}
+
+.content-loaded .achievements-container .achievement-card {
   animation: cardSlam 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.achievements-container .achievement-card:nth-child(1) { animation-delay: 1.3s; }
-.achievements-container .achievement-card:nth-child(2) { animation-delay: 1.42s; }
-.achievements-container .achievement-card:nth-child(3) { animation-delay: 1.54s; }
+.content-loaded .achievements-container .achievement-card:nth-child(1) { animation-delay: 0.72s; }
+.content-loaded .achievements-container .achievement-card:nth-child(2) { animation-delay: 0.84s; }
+.content-loaded .achievements-container .achievement-card:nth-child(3) { animation-delay: 0.96s; }
 
 /* Link buttons slide in alternating from left/right like dealing to two hands */
 @keyframes dealLeft {
@@ -1952,18 +1966,18 @@ footer .heart-icon {
   opacity: 0;
 }
 
-.link-section .link-button:nth-child(odd) {
+.content-loaded .link-section .link-button:nth-child(odd) {
   animation: dealLeft 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.link-section .link-button:nth-child(even) {
+.content-loaded .link-section .link-button:nth-child(even) {
   animation: dealRight 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 /* Note: h2 is :nth-child(1), so first link-button is :nth-child(2) */
-.link-section .link-button:nth-child(2) { animation-delay: 0.85s; }
-.link-section .link-button:nth-child(3) { animation-delay: 0.95s; }
-.link-section .link-button:nth-child(4) { animation-delay: 1.05s; }
+.content-loaded .link-section .link-button:nth-child(2) { animation-delay: 0.35s; }
+.content-loaded .link-section .link-button:nth-child(3) { animation-delay: 0.45s; }
+.content-loaded .link-section .link-button:nth-child(4) { animation-delay: 0.55s; }
 
 /* Testimonial card entrance */
 @keyframes testimonialReveal {
@@ -2274,33 +2288,33 @@ body.dark-mode .dev-toggle-btn:hover {
   will-change: transform, opacity, filter;
 }
 
-/* Odd children fall from left, even from right — like shuffling cards */
-.profile-container > *:nth-child(odd) {
+/* Animations only trigger after preloader finishes */
+.content-loaded .profile-container > *:nth-child(odd) {
   animation: cardCascadeLeft 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
-.profile-container > *:nth-child(even) {
+.content-loaded .profile-container > *:nth-child(even) {
   animation: cardCascadeRight 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 /* First child (header) gets the center drop — like the top card */
-.profile-container > *:nth-child(1) {
+.content-loaded .profile-container > *:nth-child(1) {
   animation-name: cardCascade;
   animation-duration: 0.9s;
   animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 /* Staggered delays — each card lands slightly after the previous */
-.profile-container > *:nth-child(1)  { animation-delay: 0.6s; }
-.profile-container > *:nth-child(2)  { animation-delay: 0.78s; }
-.profile-container > *:nth-child(3)  { animation-delay: 0.93s; }
-.profile-container > *:nth-child(4)  { animation-delay: 1.06s; }
-.profile-container > *:nth-child(5)  { animation-delay: 1.17s; }
-.profile-container > *:nth-child(6)  { animation-delay: 1.27s; }
-.profile-container > *:nth-child(7)  { animation-delay: 1.36s; }
-.profile-container > *:nth-child(8)  { animation-delay: 1.44s; }
-.profile-container > *:nth-child(9)  { animation-delay: 1.51s; }
-.profile-container > *:nth-child(10) { animation-delay: 1.57s; }
-.profile-container > *:nth-child(11) { animation-delay: 1.63s; }
+.content-loaded .profile-container > *:nth-child(1)  { animation-delay: 0.15s; }
+.content-loaded .profile-container > *:nth-child(2)  { animation-delay: 0.3s; }
+.content-loaded .profile-container > *:nth-child(3)  { animation-delay: 0.42s; }
+.content-loaded .profile-container > *:nth-child(4)  { animation-delay: 0.52s; }
+.content-loaded .profile-container > *:nth-child(5)  { animation-delay: 0.61s; }
+.content-loaded .profile-container > *:nth-child(6)  { animation-delay: 0.69s; }
+.content-loaded .profile-container > *:nth-child(7)  { animation-delay: 0.76s; }
+.content-loaded .profile-container > *:nth-child(8)  { animation-delay: 0.82s; }
+.content-loaded .profile-container > *:nth-child(9)  { animation-delay: 0.87s; }
+.content-loaded .profile-container > *:nth-child(10) { animation-delay: 0.92s; }
+.content-loaded .profile-container > *:nth-child(11) { animation-delay: 0.96s; }
 
 /* After landing, sections get a subtle hover lift */
 .profile-container > section {
@@ -2334,11 +2348,19 @@ body.dark-mode .dev-toggle-btn:hover {
 }
 
 .theme-toggle {
-  animation: flyInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+  opacity: 0;
 }
 
 .language-selector {
-  animation: flyInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+  opacity: 0;
+}
+
+.content-loaded .theme-toggle {
+  animation: flyInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s both;
+}
+
+.content-loaded .language-selector {
+  animation: flyInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
 }
 
 /* Scroll reveal */

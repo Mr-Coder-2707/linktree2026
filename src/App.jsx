@@ -1,4 +1,5 @@
 import { AppProvider } from "./context/AppContext";
+import { useState, useCallback } from "react";
 import Preloader from "./components/Preloader";
 import BgAnimation from "./components/BgAnimation";
 import ThemeToggle from "./components/ThemeToggle";
@@ -17,25 +18,30 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+  const handlePreloaderDone = useCallback(() => setLoaded(true), []);
+
   return (
     <AppProvider>
-      <Preloader />
+      <Preloader onDone={handlePreloaderDone} />
       <BgAnimation />
-      <ThemeToggle />
-      <LanguageSelector />
+      <div className={loaded ? "content-loaded" : ""}>
+        <ThemeToggle />
+        <LanguageSelector />
 
-      <div className="profile-container">
-        <Header />
-        <PrimaryLinks />
-        <MediaEmbed />
-        <SocialGrid />
-        <Projects />
-        <Achievements />
-        <Skills />
-        <Testimonials />
-        <Newsletter />
-        <Contact />
-        <Footer />
+        <div className="profile-container">
+          <Header />
+          <PrimaryLinks />
+          <MediaEmbed />
+          <SocialGrid />
+          <Projects />
+          <Achievements />
+          <Skills />
+          <Testimonials />
+          <Newsletter />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </AppProvider>
   );
