@@ -7,6 +7,8 @@ const ogImages = [
   profileImg,
   "/1770501459853.png",
   "/20260113_142345.jpg",
+  "/20260214_130337.jpg.jpeg",
+  "/ChatGPT Image Feb 19, 2026, 02_33_39 AM.png",
   "/file_000000004f2c722f81faed14a78d0144 (1).png",
   "/file_00000000dd8c71f48c3e034935e3bd51.png",
   "/file_00000000f14871f5a49a425fd8cf7bb8.png",

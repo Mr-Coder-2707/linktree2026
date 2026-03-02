@@ -1,7 +1,7 @@
 import { AppProvider } from "./context/AppContext";
 import { useState, useCallback } from "react";
 import Preloader from "./components/Preloader";
-import BgAnimation from "./components/BgAnimation";
+import NeuralGrid from "./components/NeuralGrid";
 import ThemeToggle from "./components/ThemeToggle";
 import LanguageSelector from "./components/LanguageSelector";
 import Header from "./components/Header";
@@ -24,7 +24,7 @@ function App() {
   return (
     <AppProvider>
       <Preloader onDone={handlePreloaderDone} />
-      <BgAnimation />
+      <NeuralGrid />
       <div className={loaded ? "content-loaded" : ""}>
         <ThemeToggle />
         <LanguageSelector />
