@@ -57,7 +57,6 @@ export default function NeuralGrid() {
     };
 
     const handleTouchMove = (e) => {
-      e.preventDefault();
       if (e.touches.length > 0) {
         const touch = e.touches[0];
         mouse.x = touch.clientX;
@@ -114,8 +113,8 @@ export default function NeuralGrid() {
 
     window.addEventListener("resize", handleResize);
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchstart", handleTouchMove, { passive: false });
-    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("touchstart", handleTouchMove, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     initGrid();
     drawGrid();
