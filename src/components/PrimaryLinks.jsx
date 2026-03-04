@@ -17,8 +17,13 @@ export default function PrimaryLinks() {
     },
   ];
 
-  const handleClick = (label, href) => {
+  const handleClick = (e, label, href) => {
+    e.preventDefault();
     trackLinkClick(href, label);
+    // Open link after a short delay to ensure tracking completes
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }, 100);
   };
 
   return (
@@ -31,7 +36,7 @@ export default function PrimaryLinks() {
           target="_blank"
           rel="noopener noreferrer"
           className="btn link-button primary-button"
-          onClick={() => handleClick(link.label, link.href)}
+          onClick={(e) => handleClick(e, link.label, link.href)}
         >
           {link.icon}
           <span>{link.label}</span>

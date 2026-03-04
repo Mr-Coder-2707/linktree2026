@@ -109,17 +109,20 @@ export function AppProvider({ children }) {
   const toggleTheme = () => setDarkMode((prev) => !prev);
 
   const trackLinkClick = (linkId, linkName) => {
+    console.log("Tracking click:", linkId, linkName); // Debug
     setAnalytics((prev) => {
-      const updated = {
-        ...prev,
-        linkClicks: {
-          ...prev.linkClicks,
-          [linkId]: {
-            name: linkName,
-            count: (prev.linkClicks[linkId]?.count || 0) + 1,
-          },
+      const updatedClicks = {
+        ...prev.linkClicks,
+        [linkId]: {
+          name: linkName,
+          count: (prev.linkClicks?.[linkId]?.count || 0) + 1,
         },
       };
+      const updated = {
+        ...prev,
+        linkClicks: updatedClicks,
+      };
+      console.log("Updated analytics:", updated); // Debug
       localStorage.setItem("analytics", JSON.stringify(updated));
       return updated;
     });

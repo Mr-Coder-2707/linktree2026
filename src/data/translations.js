@@ -112,6 +112,7 @@ const translations = {
     linkClickDetails: "Link Click Details",
     resetAnalytics: "Reset Analytics",
     confirmResetAnalytics: "Are you sure you want to reset all analytics data? This action cannot be undone.",
+    noClicksYet: "No clicks yet. Start clicking links to see data!",
   },
   ar: {
     bio: "أنا محمود الخواص — مطوّر Full Stack شغوف ومبتكر تقني، متخصص في بناء أنظمة ذكية، وواجهات سهلة الاستخدام، وتطبيقات ويب وموبايل قوية.✨",
@@ -226,6 +227,7 @@ const translations = {
     linkClickDetails: "تفاصيل النقرات على الروابط",
     resetAnalytics: "إعادة تعيين الإحصائيات",
     confirmResetAnalytics: "هل أنت متأكد من حذف جميع بيانات الإحصائيات؟ لا يمكن التراجع عن هذا الإجراء.",
+    noClicksYet: "لا توجد نقرات بعد. ابدأ بالنقر على الروابط لرؤية البيانات!",
   },
   fr: {
     bio: "Je suis Mahmoud Elkhwass — un développeur Full Stack passionné et créateur technologique, spécialisé dans la création de systèmes intelligents, d'interfaces conviviales et d'applications web et mobiles performantes.✨",
@@ -340,6 +342,7 @@ const translations = {
     linkClickDetails: "Détails des clics sur les liens",
     resetAnalytics: "Réinitialiser les analytiques",
     confirmResetAnalytics: "Êtes-vous sûr de vouloir réinitialiser toutes les données analytiques ? Cette action ne peut pas être annulée.",
+    noClicksYet: "Aucun clic pour le moment. Commencez à cliquer sur les liens pour voir les données!",
   },
 };
 

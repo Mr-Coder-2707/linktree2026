@@ -56,8 +56,12 @@ const socials = [
 export default function SocialGrid() {
   const { t, trackLinkClick } = useApp();
 
-  const handleClick = (label, href) => {
+  const handleClick = (e, label, href) => {
+    e.preventDefault();
     trackLinkClick(href, label);
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }, 100);
   };
 
   return (
@@ -72,7 +76,7 @@ export default function SocialGrid() {
             aria-label={s.label}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => handleClick(s.label, s.href)}
+            onClick={(e) => handleClick(e, s.label, s.href)}
           >
             {s.icon}
           </a>

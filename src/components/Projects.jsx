@@ -10,8 +10,12 @@ export default function Projects() {
     { icon: <FaPaintBrush />, label: t("designPortfolio"), href: "https://mr-coder-2707.github.io/Mahmoud-Elkhwass-Profile1/" },
   ];
 
-  const handleClick = (label, href) => {
+  const handleClick = (e, label, href) => {
+    e.preventDefault();
     trackLinkClick(href, label);
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }, 100);
   };
 
   return (
@@ -22,7 +26,7 @@ export default function Projects() {
           key={i} 
           href={p.href} 
           className="btn link-button"
-          onClick={() => handleClick(p.label, p.href)}
+          onClick={(e) => handleClick(e, p.label, p.href)}
         >
           {p.icon}
           <span>{p.label}</span>
