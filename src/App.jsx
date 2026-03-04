@@ -12,6 +12,7 @@ import Projects from "./components/Projects";
 import Achievements from "./components/Achievements";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Analytics from "./components/Analytics";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -35,6 +36,7 @@ function App() {
           <Projects />
           <Achievements />
           <Skills />
+          <Analytics />
           <Contact />
           <Footer />
         </div>

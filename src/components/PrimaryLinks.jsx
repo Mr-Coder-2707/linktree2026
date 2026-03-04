@@ -2,7 +2,7 @@ import { FaLink, FaBriefcase, FaArrowRight } from "react-icons/fa";
 import { useApp } from "../context/AppContext";
 
 export default function PrimaryLinks() {
-  const { t } = useApp();
+  const { t, trackLinkClick } = useApp();
 
   const links = [
     {
@@ -17,6 +17,10 @@ export default function PrimaryLinks() {
     },
   ];
 
+  const handleClick = (label, href) => {
+    trackLinkClick(href, label);
+  };
+
   return (
     <section className="link-section">
       <h2>{t("primaryLinks")}</h2>
@@ -27,6 +31,7 @@ export default function PrimaryLinks() {
           target="_blank"
           rel="noopener noreferrer"
           className="btn link-button primary-button"
+          onClick={() => handleClick(link.label, link.href)}
         >
           {link.icon}
           <span>{link.label}</span>

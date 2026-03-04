@@ -102,6 +102,16 @@ const translations = {
     devEducation: "Computer Science & Software Engineering",
     devTechStack: "Tech Stack",
     devCredit: "Designed & Developed by",
+    // Analytics
+    analytics: "Analytics",
+    pageViews: "Page Views",
+    totalClicks: "Total Clicks",
+    clicks: "Clicks",
+    showDetails: "Show Details",
+    hideDetails: "Hide Details",
+    linkClickDetails: "Link Click Details",
+    resetAnalytics: "Reset Analytics",
+    confirmResetAnalytics: "Are you sure you want to reset all analytics data? This action cannot be undone.",
   },
   ar: {
     bio: "أنا محمود الخواص — مطوّر Full Stack شغوف ومبتكر تقني، متخصص في بناء أنظمة ذكية، وواجهات سهلة الاستخدام، وتطبيقات ويب وموبايل قوية.✨",
@@ -206,6 +216,16 @@ const translations = {
     devEducation: "علوم الحاسب وهندسة البرمجيات",
     devTechStack: "التقنيات المستخدمة",
     devCredit: "تصميم وتطوير",
+    // Analytics
+    analytics: "الإحصائيات",
+    pageViews: "عدد المشاهدات",
+    totalClicks: "إجمالي النقرات",
+    clicks: "نقرة",
+    showDetails: "عرض التفاصيل",
+    hideDetails: "إخفاء التفاصيل",
+    linkClickDetails: "تفاصيل النقرات على الروابط",
+    resetAnalytics: "إعادة تعيين الإحصائيات",
+    confirmResetAnalytics: "هل أنت متأكد من حذف جميع بيانات الإحصائيات؟ لا يمكن التراجع عن هذا الإجراء.",
   },
   fr: {
     bio: "Je suis Mahmoud Elkhwass — un développeur Full Stack passionné et créateur technologique, spécialisé dans la création de systèmes intelligents, d'interfaces conviviales et d'applications web et mobiles performantes.✨",
@@ -310,6 +330,16 @@ const translations = {
     devEducation: "Informatique et Génie Logiciel",
     devTechStack: "Stack Technique",
     devCredit: "Conçu et développé par",
+    // Analytics
+    analytics: "Analytiques",
+    pageViews: "Vues de page",
+    totalClicks: "Total de clics",
+    clicks: "Clics",
+    showDetails: "Afficher les détails",
+    hideDetails: "Masquer les détails",
+    linkClickDetails: "Détails des clics sur les liens",
+    resetAnalytics: "Réinitialiser les analytiques",
+    confirmResetAnalytics: "Êtes-vous sûr de vouloir réinitialiser toutes les données analytiques ? Cette action ne peut pas être annulée.",
   },
 };
 

@@ -27,6 +27,27 @@ export function AppProvider({ children }) {
     return null;
   });
 
+  const [analytics, setAnalytics] = useState(() => {
+    const saved = localStorage.getItem("analytics");
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch {
+        return { pageViews: 0, linkClicks: {} };
+      }
+    }
+    return { pageViews: 0, linkClicks: {} };
+  });
+
+  // Track page views
+  useEffect(() => {
+    setAnalytics((prev) => {
+      const updated = { ...prev, pageViews: prev.pageViews + 1 };
+      localStorage.setItem("analytics", JSON.stringify(updated));
+      return updated;
+    });
+  }, []);
+
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
     if (darkMode) {
@@ -87,6 +108,31 @@ export function AppProvider({ children }) {
 
   const toggleTheme = () => setDarkMode((prev) => !prev);
 
+  const trackLinkClick = (linkId, linkName) => {
+    setAnalytics((prev) => {
+      const updated = {
+        ...prev,
+        linkClicks: {
+          ...prev.linkClicks,
+          [linkId]: {
+            name: linkName,
+            count: (prev.linkClicks[linkId]?.count || 0) + 1,
+          },
+        },
+      };
+      localStorage.setItem("analytics", JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  const getAnalytics = () => analytics;
+
+  const resetAnalytics = () => {
+    const resetData = { pageViews: 0, linkClicks: {} };
+    setAnalytics(resetData);
+    localStorage.setItem("analytics", JSON.stringify(resetData));
+  };
+
   const value = {
     darkMode,
     toggleTheme,
@@ -95,6 +141,10 @@ export function AppProvider({ children }) {
     t,
     colorScheme,
     setColorScheme,
+    analytics,
+    trackLinkClick,
+    getAnalytics,
+    resetAnalytics,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

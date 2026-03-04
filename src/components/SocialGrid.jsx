@@ -54,7 +54,11 @@ const socials = [
 ];
 
 export default function SocialGrid() {
-  const { t } = useApp();
+  const { t, trackLinkClick } = useApp();
+
+  const handleClick = (label, href) => {
+    trackLinkClick(href, label);
+  };
 
   return (
     <section className="link-section">
@@ -68,6 +72,7 @@ export default function SocialGrid() {
             aria-label={s.label}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => handleClick(s.label, s.href)}
           >
             {s.icon}
           </a>
